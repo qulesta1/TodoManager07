@@ -22,7 +22,6 @@ public class MainBoardFragment extends Fragment {
     private FragmentMainBoardBinding binding;
     ViewPagerAdapter adapter;
     ArrayList<ViewPagerModel> list = new ArrayList<>();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,5 +37,6 @@ public class MainBoardFragment extends Fragment {
         list.add(new ViewPagerModel("3", "3", R.drawable.todo_illustration));
         adapter = new ViewPagerAdapter(list);
         binding.viewpager.setAdapter(adapter);
+        binding.springDotsIndicator.setViewPager2(binding.viewpager);
     }
 }
